@@ -1,5 +1,7 @@
 # foodie-site
 
+SoMeThInG wEiRd
+
 <p align="center">
     <img src="https://img.shields.io/badge/Javascript-yellow" />
     <img src="https://img.shields.io/badge/express-orange" />
