@@ -1,15 +1,21 @@
 <section>
-  <h2>Create New Post</h2>
-
+  <h2>Create New Recipe</h2>
   <form class="new-post-form">
     <div>
-      <label for="post-title">Title</label>
+      <label for="dish-title">Dish Title</label>
       <input type="text" id="post-title" name="post-title" />
     </div>
+
     <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
+      <label for="ingredients">Ingredients Needed</label>
+      <input type="text" id="ingredients" name="ingredients"/>
     </div>
+
+    <div>
+      <label for="directions">How to create your dish</label>
+      <input type="text" id="directions" name="directions"/>
+    </div>
+
     <button type="submit" class="btn">Create</button>
   </form>
 </section>
