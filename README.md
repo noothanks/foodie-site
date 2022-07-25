@@ -1,8 +1,28 @@
 # Foodie Site
 
+<p align="center">
+    <img src="https://img.shields.io/badge/Javascript-yellow" />
+    <img src="https://img.shields.io/badge/express-orange" />
+    <img src="https://img.shields.io/badge/Sequelize-blue"  />
+    <img src="https://img.shields.io/badge/mySQL-blue"  />
+    <img src="https://img.shields.io/badge/dotenv-green" />
+</p>
+
 ## Project Description
 
 - As a home cook, I want to view a variety of recipes so that I can review them and provide feedback.
+
+## Table of Contents
+
+- [Description](#Description)
+- [Wireframe](#Wireframe)
+- [Technologies Used](#Technologies-Used)
+- [User-Story](#User-Story)
+- [Acceptance-Criteria](#Acceptance-Criteria)
+- [Demo](#Demo)
+- [Presentation](#Presentation)
+- [Repository Link](#Repository-Link)
+- [Screenshot](#Screenshot)
 
 ## Wireframe:
 
