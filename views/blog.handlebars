@@ -1,26 +1,18 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
-    {{> post-info post }}
-  </li>
-  {{/each}}
-</ol>
+<div class="container text-center">
+    <h1>Foodie Blog</h1>
+</div>
+</br>
+
+<img src="/Photos/Ribs.jpg" class="d-block w-100" alt="..." />
+</br>
 
 <section>
-  {{#if posts.length}}
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
+{{#each posts as |post|}}
+
+{{> post-info post }}
+</div>
+
+{{else}}
+<h6 class="pb-4 has-text-centered is-italic">there are currently no posts</h6>
+{{/each}}
 </section>
-{{/if}}
-
-<button type="submit" class="btn"><a class="link" href="/dashboard/new">Create New Post</a></button>
-
-<script src="/javascript/add-post.js"></script>
-
