@@ -176,3 +176,30 @@ footer {
   padding: 1%;
   font-size: 110%;
 }
+
+.container-home{
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify content: center;
+}
+
+.right{
+  width: 50%;
+  height: 600px;
+  background-image: url(/Photos/ramen.jpg);
+}
+
+.left{
+  width: 50%;
+  min-height: 400px;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+  
+}
