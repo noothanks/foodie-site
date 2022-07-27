@@ -3,12 +3,16 @@ async function newFormHandler(event) {
 
   const title = document.querySelector('input[name="post-title"]').value;
   const content = document.querySelector('input[name="content"]').value;
+  const steps = document.querySelector('input[name="steps"]').value;
+
+  console.log(steps);
 
   const response = await fetch(`/api/posts`, {
     method: "POST",
     body: JSON.stringify({
       title,
       content,
+      steps
     }),
     headers: {
       "Content-Type": "application/json",
@@ -16,10 +20,12 @@ async function newFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace("/dashboard");
+    document.location.replace("/blog");
   } else {
     alert(response.statusText);
   }
+
+  console.log(response);
 }
 
 document

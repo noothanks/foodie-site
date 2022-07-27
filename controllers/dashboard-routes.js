@@ -15,6 +15,7 @@ router.get("/", withAuth, (req, res) => {
       "id",
       "content",
       "title",
+      "steps",
       "created_at",
       [
         sequelize.literal(

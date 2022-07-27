@@ -4,7 +4,7 @@ const { Post, User, Comment, Vote } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // get all users
-router.get("/", (req, res) => {
+router.get("/blog", (req, res) => {
   console.log("======================");
   Post.findAll({
     attributes: [
@@ -91,6 +91,7 @@ router.post("/", withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
     content: req.body.content,
+    steps: req.body.steps,
     user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
