@@ -315,3 +315,121 @@ textarea {
 .my-float {
   margin-top: 22px;
 }
+
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: antiquewhite;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-bar{
+  background-color: bisque !important;
+  display: flow-root;
+  padding: 0 10%;
+}
+
+#check{
+  display: none;
+}
+
+.logo-header{
+  display: table;
+  float: left;
+  vertical-align: middle;
+  padding: 0;
+  color:black;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 180px;
+  height: 68px;
+  position: relative;
+  z-index: 9;
+  transition: all 0.5s;
+  -moz-transtion: all 0.5;
+  -webkit-transition: all 0.5;
+  -o-transition: all 0.5s;
+}
+
+.logo-header::before{
+  content:"";
+  position:absolute;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;
+  right: -50px;
+  width: 80%;
+  transform: skew(30deg);
+  background-color:lemonchiffon;                
+}
+
+.log-header::after{
+  content: "";
+  position:absolute;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;
+  right: 10%;
+  width: 2000px;
+  background-color: lemonchiffon;
+}
+
+
+.logo-header a{
+  color:;
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 70px;
+  text-decoration: none;
+}
+
+ul{
+ float: right; 
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 70px;
+  border-radius: 14px;
+}
+
+nav li.active a{
+  background-color: lemonchiffon;
+  border-radius: 14px;
+
+}
+
+nav li a{
+  padding: 15px 25px;
+  border: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color:;
+  opacity: 1;
+  text-decoration: none;
+  transition: all 0.5s;
+  border-radius: 14px;
+}
+
+nav li:hover a{
+  color:bisque;
+  background-color: lemonchiffon;
+  border-radius: 14px;
+}
+
+@media (max-width: 1250px){
+  .main-bar{
+      padding: 0 2%;
+  }
+}
+
+
+</style>

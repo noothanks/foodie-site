@@ -21,19 +21,32 @@
   <body>
     <div class="wrapper">
       <header class="hero">
-        <h1>
-          <a href="/">Home</a>
-          <a href="/blog">Blog</a>
-          <a href="/about">About</a>
-        </h1>
-        <nav>
-          {{#if loggedIn}}
-            <a href="/dashboard">Dashboard</a>
-            <button id="logout" class="btn-no-style">logout</button>
-          {{else}}
-            <a href="/login">login</a>
-          {{/if}}
-        </nav>
+         <div class="main-bar">
+            <nav>
+                                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <div class="logo-header">
+                    <a href="#">F-W!</a>
+                </div>
+
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    {{#if loggedIn}}
+                    <li><a href="/dashboard">Add Post</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="chat">Chat</a></li>
+                    <button id="logout" class="btn-no-style">logout</button>
+                    {{else}}         
+                    <li><a href="/login">Login</a></li>
+
+                </ul>
+            </nav>
+        </div>
       </header>
       <main>
         {{{body}}}
