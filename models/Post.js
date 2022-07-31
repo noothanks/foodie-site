@@ -61,7 +61,7 @@ Post.init(
     },
     content: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     steps: {
       type: DataTypes.STRING,

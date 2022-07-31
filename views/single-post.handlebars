@@ -1,5 +1,12 @@
 {{> post-info post}}
 
+<div>
+  <p> Ingredients: {{post.content}}</p>
+</div>
+<div>
+  <p> Instructions: {{post.steps}}</p>
+</div>
+
 {{#if loggedIn}}
 <form class="comment-form">
   <div>
@@ -18,4 +25,5 @@
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
+<script src="/javascript/steps.js"></script>
 {{/if}}

@@ -5,7 +5,7 @@ async function newFormHandler(event) {
   const content = document.querySelector('input[name="content"]').value;
   const steps = document.querySelector('input[name="steps"]').value;
 
-  console.log(steps);
+  
 
   const response = await fetch(`/api/posts`, {
     method: "POST",
@@ -21,10 +21,11 @@ async function newFormHandler(event) {
 
   if (response.ok) {
     document.location.replace("/blog");
+    return response;
   } else {
     alert(response.statusText);
   }
-
+  console.log(steps);
   console.log(response);
 }
 
