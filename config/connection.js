@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const PORT = process.env.PORT || 3306
+const PORT = process.env.PORT || 3001
 require("dotenv").config();
 
 // create connection to our db
