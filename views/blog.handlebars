@@ -1,0 +1,18 @@
+<div class="container text-center">
+    <h1>Foodie Blog</h1>
+</div>
+</br>
+
+<img src="/Photos/Ribs.jpg" class="d-block w-100" alt="..." />
+</br>
+
+<section>
+{{#each posts as |post|}}
+
+{{> post-info post }}
+</div>
+
+{{else}}
+<h6 class="pb-4 has-text-centered is-italic">there are currently no posts</h6>
+{{/each}}
+</section>

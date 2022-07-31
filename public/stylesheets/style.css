@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -14,7 +15,7 @@ a {
   text-decoration: none;
   color: #225ca3;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
 }
 
 a:hover {
@@ -27,7 +28,7 @@ button {
   padding: 1%;
   color: white;
   font-weight: bold;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -41,13 +42,15 @@ button:hover {
   padding: 0;
 }
 
-textarea, input {
-  padding: .5%;
+textarea,
+input {
+  padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
   border: 1px solid #3486eb;
 }
@@ -100,7 +103,7 @@ main {
   color: #225ca3;
   font-size: 100%;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
   margin-left: 16px;
 }
 
@@ -135,7 +138,7 @@ main {
 
 .upvote-btn {
   background-color: #197d0f;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
 }
 
 .upvote-btn:hover {
@@ -157,8 +160,8 @@ main {
 
 .comment .meta {
   font-size: 90%;
-  margin-bottom: .5%;
-  opacity: .6;
+  margin-bottom: 0.5%;
+  opacity: 0.6;
 }
 
 .new-post-form input {
@@ -176,3 +179,257 @@ footer {
   padding: 1%;
   font-size: 110%;
 }
+
+.container-home {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  width: 50%;
+  height: 600px;
+  background-image: url(/Photos/ramen.jpg);
+}
+
+.left {
+  width: 50%;
+  min-height: 400px;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.newsletter-container {
+  text-align: left;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+.contact-container input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+.contact-container input[type="submit"] {
+  background-color: dodgerblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.contact-container input[type="submit"]:hover {
+  background-color: dodgerblue;
+  box-sizing: border-box;
+}
+
+/* Add a background color and some padding around the form */
+.contact-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Chat button */
+.float {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  background-color: #ccc;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #ff643d;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float {
+  margin-top: 22px;
+}
+
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: antiquewhite;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-bar{
+  background-color: bisque !important;
+  display: flow-root;
+  padding: 0 10%;
+}
+
+#check{
+  display: none;
+}
+
+.logo-header{
+  display: table;
+  float: left;
+  vertical-align: middle;
+  padding: 0;
+  color:black;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 180px;
+  height: 68px;
+  position: relative;
+  z-index: 9;
+  transition: all 0.5s;
+  -moz-transtion: all 0.5;
+  -webkit-transition: all 0.5;
+  -o-transition: all 0.5s;
+}
+
+.logo-header::before{
+  content:"";
+  position:absolute;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;
+  right: -50px;
+  width: 80%;
+  transform: skew(30deg);
+  background-color:lemonchiffon;                
+}
+
+.log-header::after{
+  content: "";
+  position:absolute;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;
+  right: 10%;
+  width: 2000px;
+  background-color: lemonchiffon;
+}
+
+
+.logo-header a{
+  color:;
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 70px;
+  text-decoration: none;
+}
+
+ul{
+ float: right; 
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 70px;
+  border-radius: 14px;
+}
+
+nav li.active a{
+  background-color: lemonchiffon;
+  border-radius: 14px;
+
+}
+
+nav li a{
+  padding: 15px 25px;
+  border: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color:;
+  opacity: 1;
+  text-decoration: none;
+  transition: all 0.5s;
+  border-radius: 14px;
+}
+
+nav li:hover a{
+  color:bisque;
+  background-color: lemonchiffon;
+  border-radius: 14px;
+}
+
+@media (max-width: 1250px){
+  .main-bar{
+      padding: 0 2%;
+  }
+}
+
+
+</style>

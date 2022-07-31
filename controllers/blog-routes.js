@@ -1,21 +1,15 @@
 const router = require("express").Router();
-const sequelize = require("../config/connection");
-const { Post, User, Comment, Vote } = require("../models");
-const withAuth = require("../utils/auth");
+const {Post, Comment, User} = require('../models');
+const sequelize = require('sequelize');
 
-// get all posts for dashboard
-router.get("/", withAuth, (req, res) => {
-  console.log(req.session);
+// get all users
+router.get("/", (req, res) => {
   console.log("======================");
   Post.findAll({
-    where: {
-      user_id: req.session.user_id,
-    },
     attributes: [
       "id",
       "content",
       "title",
-      "steps",
       "created_at",
       [
         sequelize.literal(
@@ -39,9 +33,12 @@ router.get("/", withAuth, (req, res) => {
       },
     ],
   })
-    .then((dbPostData) => {
+    .then((dbPostData) => 
+    {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("dashboard", { posts, loggedIn: true });
+      res.render('blog', {
+        posts:posts,
+      })
     })
     .catch((err) => {
       console.log(err);
@@ -49,8 +46,11 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-router.get("/edit/:id", withAuth, (req, res) => {
-  Post.findByPk(req.params.id, {
+router.get("/:id", (req, res) => {
+  Post.findOne({
+    where: {
+      id: req.params.id,
+    },
     attributes: [
       "id",
       "content",
@@ -79,24 +79,16 @@ router.get("/edit/:id", withAuth, (req, res) => {
     ],
   })
     .then((dbPostData) => {
-      if (dbPostData) {
-        const post = dbPostData.get({ plain: true });
-
-        res.render("edit-post", {
-          post,
-          loggedIn: true,
-        });
-      } else {
-        res.status(404).end();
+      if (!dbPostData) {
+        res.status(404).json({ message: "No post found with this id" });
+        return;
       }
+      res.json(dbPostData);
     })
     .catch((err) => {
+      console.log(err);
       res.status(500).json(err);
     });
-});
-
-router.get("/new", withAuth, (req, res) => {
-  return res.render("add-post");
 });
 
 module.exports = router;

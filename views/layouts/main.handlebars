@@ -1,39 +1,111 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodie World</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Just Tech News</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
-  </div>
-  
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
-</body>
+  <body>
+    <div class="wrapper">
+      <header class="hero">
+         <div class="main-bar">
+            <nav>
+                                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <div class="logo-header">
+                    <a href="#">F-W!</a>
+                </div>
+
+                <ul>
+                    <li class="active"><a href="/">Home</a></li>
+                    {{#if loggedIn}}
+                    <li><a href="/dashboard">Add Post</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="https://connect-hub-chat-forum.herokuapp.com/">Chat</a></li>
+                    <button id="logout" class="btn-no-style">logout</button>
+                    {{else}}         
+                    <li><a href="/login">Login</a></li>
+                    {{/if}}
+                </ul>
+            </nav>
+        </div>
+      </header>
+      <main>
+        {{{body}}}
+        
+        <!-- RAFAEL FLOATING CHAT BUTTON -->
+        <a href="#" class="float">
+          <i class="fa fa-plus my-float"></i>
+        </a>
+      </main>
+      <footer>
+        <form action="/action_page.php">
+          <div class="container">
+            <h3>Subscribe to our Cookbook</h3>
+            <p>Lorem ipsum text about why you should subscribe to our newsletter
+              blabla. Lorem ipsum text about why you should subscribe to our
+              newsletter blabla.
+            </p>
+          </div>
+
+          <div class="newsletter-container" style="background-color:white">
+            <div class="input-container">
+              <i class="fa fa-user icon"></i>
+              <input type="text" placeholder="Name" name="name" required />
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-envelope icon"></i>
+              <input
+                type="text"
+                placeholder="Email address"
+                name="mail"
+                required
+              />
+            </div>
+
+            <label>
+              <input type="checkbox" checked="checked" name="subscribe" />
+              Daily Newsletter
+            </label>
+          </div>
+
+          <div class="container">
+            <input type="submit" value="Subscribe" />
+          </div>
+        </form>
+          <img src="Photos/fooodie-logo.jpg" alt="Foodie World" width="50px">
+          </br> </br>
+          Thanks for visiting! Enjoy your delicious food!
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+
+  </body>
 
 </html>

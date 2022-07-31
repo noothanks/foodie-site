@@ -1,31 +1,50 @@
-<section>
-  <h2>Create New Post</h2>
+<div class="container text-center">
+    <h1>Foodie Dashboard</h1>
+</div>
+</br>
+  
+<img src="/Photos/pizza.jpg" class="d-block w-100" alt="..." />
+</br>
 
+<h2 class="title pb-4">Your posts:</h2><hr>
+{{#if posts.length}}
+    <div>
+
+    {{#each posts as |post|}}
+        {{> post-info post}}
+        
+            <a href="/dashboard/edit/{{post.id}}"><button class="button mb-5 ml-5 is-warning">edit post</button></a>
+        </div>
+    {{/each}}
+
+{{else}}
+<h6 class="pb-4 has-text-centered is-italic">You do not currently have any posts...</h6>
+
+{{/if}}
+<hr>
+</br>
+
+
+<section>
+  <h2>Create New Recipe</h2>
   <form class="new-post-form">
     <div>
-      <label for="post-title">Title</label>
+      <label for="dish-title">Dish Title</label>
       <input type="text" id="post-title" name="post-title" />
     </div>
+
     <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
+      <label for="ingredients">Ingredients Needed</label>
+      <input type="text" id="ingredients" name="content"/>
     </div>
-    <button type="submit" class="btn">Create</button>
+
+    <div>
+      <label for="directions">How to create your dish</label>
+      <input type="text" id="directions" name="steps"/>
+    </div>
+
+    <button type="submit" class="btn mb-5 pt-3">Create</button>
   </form>
 </section>
-
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
 
 <script src="/javascript/add-post.js"></script>
