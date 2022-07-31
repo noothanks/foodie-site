@@ -16,7 +16,7 @@ class Post extends Model {
           "id",
           "content",
           "title",
-          "created_at",,
+          "created_at",
           "steps",
           [
             sequelize.literal(

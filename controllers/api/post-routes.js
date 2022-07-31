@@ -10,6 +10,7 @@ router.get("/blog", (req, res) => {
     attributes: [
       "id",
       "content",
+      "steps",
       "title",
       "created_at",
       [
@@ -50,6 +51,7 @@ router.get("/:id", (req, res) => {
       "id",
       "content",
       "title",
+      "steps",
       "created_at",
       [
         sequelize.literal(
