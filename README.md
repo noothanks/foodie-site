@@ -43,7 +43,7 @@
 
 ## Technologies Used
 
-- [RecipeAPIname](LINKTOAPI.com)
+- [Recipe-Ninja](https://rapidapi.com/apininjas/api/recipe-by-api-ninjas/)
 
 ## Presentation
 
